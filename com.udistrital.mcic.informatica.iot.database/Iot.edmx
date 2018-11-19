@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="IotModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="IotModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="noise">
           <Key>
             <PropertyRef Name="idNoise" />
@@ -13,11 +13,18 @@
           <Property Name="dateNoise" Type="datetime" Nullable="false" />
           <Property Name="levelNoise" Type="float" Nullable="false" />
         </EntityType>
+        <EntityType Name="noiseConfig">
+          <Key>
+            <PropertyRef Name="idNoiseConfig" />
+          </Key>
+          <Property Name="idNoiseConfig" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="onNoiseConfig" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
         <EntityContainer Name="IotModelStoreContainer">
           <EntitySet Name="noise" EntityType="Self.noise" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="noiseConfig" EntityType="Self.noiseConfig" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="IotModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -31,7 +38,15 @@
         </EntityType>
         <EntityContainer Name="IotEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="noises" EntityType="Self.noise" />
+          <EntitySet Name="noiseConfigs" EntityType="IotModel.noiseConfig" />
         </EntityContainer>
+        <EntityType Name="noiseConfig">
+          <Key>
+            <PropertyRef Name="idNoiseConfig" />
+          </Key>
+          <Property Name="idNoiseConfig" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="onNoiseConfig" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -44,6 +59,14 @@
                 <ScalarProperty Name="idNoise" ColumnName="idNoise" />
                 <ScalarProperty Name="dateNoise" ColumnName="dateNoise" />
                 <ScalarProperty Name="levelNoise" ColumnName="levelNoise" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="noiseConfigs">
+            <EntityTypeMapping TypeName="IotModel.noiseConfig">
+              <MappingFragment StoreEntitySet="noiseConfig">
+                <ScalarProperty Name="onNoiseConfig" ColumnName="onNoiseConfig" />
+                <ScalarProperty Name="idNoiseConfig" ColumnName="idNoiseConfig" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -11,7 +11,7 @@ namespace com.udistrital.mcic.informatica.iot.database
     {
         IotEntities context = new IotEntities();
 
-        public void insertNoise(Noise noise)
+        public void insertNoise(Noise noise) 
         {
             var noiseDb = new noise
             {
@@ -23,20 +23,42 @@ namespace com.udistrital.mcic.informatica.iot.database
             context.SaveChanges();
         }
 
-        public List<Noise> selectNoises(DateTime startDateTime, DateTime endDateTime)
+        public List<Noise> selectNoises(DateTime startDateTime, DateTime endDateTime)  
         {
             
             //var studentList = ctx.Students.Where(s => s.StudentName == "Bill").ToList();
             var noises = context.noises.Where(n => n.dateNoise >= startDateTime).Where(n => n.dateNoise <= endDateTime).Select(n => new Noise
-            {
-                dateNoise = n.dateNoise,
-                levelNoise = n.levelNoise
-            }
+                {
+                    dateNoise = n.dateNoise,
+                    levelNoise = n.levelNoise
+                }
             ).ToList();
 
            
 
             return noises;
+        }
+
+        public NoiseConfig selectNoiseConfig()
+        {
+            var noiseConfig = context.noiseConfigs.Select(n => new NoiseConfig
+                {
+                    OnNoiseConfig = n.onNoiseConfig
+                }
+            ).FirstOrDefault();
+
+            return noiseConfig;
+        }
+
+        public void updateNoiseConfig(NoiseConfig noiseConfig)
+        {
+            var noiseConfigQuery = (from a in context.noiseConfigs
+                                    where a.idNoiseConfig == 1
+                                    select a).FirstOrDefault();
+
+            noiseConfigQuery.onNoiseConfig = noiseConfig.OnNoiseConfig;
+
+            context.SaveChanges();
         }
     }
 }

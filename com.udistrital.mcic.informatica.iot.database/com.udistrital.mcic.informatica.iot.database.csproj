@@ -67,6 +67,9 @@
     <Compile Include="noise.cs">
       <DependentUpon>Iot.tt</DependentUpon>
     </Compile>
+    <Compile Include="noiseConfig.cs">
+      <DependentUpon>Iot.tt</DependentUpon>
+    </Compile>
     <Compile Include="NoiseDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

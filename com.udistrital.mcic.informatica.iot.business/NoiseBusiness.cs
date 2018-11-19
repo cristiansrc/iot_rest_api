@@ -16,7 +16,9 @@ namespace com.udistrital.mcic.informatica.iot.business
         {
             Noise noise = new Noise();
             noise.levelNoise = levelNoise.levelNoise;
-            noise.dateNoise = DateTime.Now;
+
+            TimeZoneInfo colombiaZone = TimeZoneInfo.FindSystemTimeZoneById("SA Pacific Standard Time");
+            noise.dateNoise = TimeZoneInfo.ConvertTime(DateTime.Now, colombiaZone);
 
             noiseDB.insertNoise(noise);
         }
@@ -35,6 +37,17 @@ namespace com.udistrital.mcic.informatica.iot.business
             endDateTime = endDateTime.AddMinutes(Int32.Parse(endHourArr[1]));
 
             return noiseDB.selectNoises(startDateTime, endDateTime);
+        }
+
+
+        public NoiseConfig getNoiseConfig()
+        {
+            return noiseDB.selectNoiseConfig();
+        }
+
+        public void updateNoiseConfig(NoiseConfig noiseConfig)
+        {
+            noiseDB.updateNoiseConfig(noiseConfig);
         }
     }
 }

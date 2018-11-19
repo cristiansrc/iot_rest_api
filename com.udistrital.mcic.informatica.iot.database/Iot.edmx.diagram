@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="2161af7e12624332a9a8e34ca9e4d1cf" Name="Diagram1">
         <EntityTypeShape EntityType="IotModel.noise" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IotModel.noiseConfig" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -26,5 +26,6 @@ namespace com.udistrital.mcic.informatica.iot.database
         }
     
         public virtual DbSet<noise> noises { get; set; }
+        public virtual DbSet<noiseConfig> noiseConfigs { get; set; }
     }
 }

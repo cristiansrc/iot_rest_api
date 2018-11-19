@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="LevelNoise.cs" />
     <Compile Include="Noise.cs" />
+    <Compile Include="NoiseConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RangeDates.cs" />
   </ItemGroup>
