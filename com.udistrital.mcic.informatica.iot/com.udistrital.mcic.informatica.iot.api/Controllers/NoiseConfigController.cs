@@ -19,14 +19,11 @@ namespace com.udistrital.mcic.informatica.iot.api.Controllers
         }
 
         // PUT: api/NoiseConfig/5
-        public void Put([FromBody] NoiseConfig noiseConfig)
+        public IHttpActionResult Put([FromBody] NoiseConfig noiseConfig)
         {
             noiseBusiness.updateNoiseConfig(noiseConfig);
+            return Ok();
         }
-
-        // DELETE: api/NoiseConfig/5
-        public void Delete(int id)
-        {
-        }
+        
     }
 }

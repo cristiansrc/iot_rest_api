@@ -24,20 +24,6 @@ namespace com.udistrital.mcic.informatica.iot.api.Controllers
             noiseBusiness.saveNoise(levelNoise);
             return Ok();
         }
-
-        // PUT: api/Noise/5
-        public IHttpActionResult Put(int id, [FromBody]string value)
-        {
-            List<String> timeZone = new List<string>();
-
-            foreach (TimeZoneInfo z in TimeZoneInfo.GetSystemTimeZones())
-            {
-                timeZone.Add(z.Id);
-
-            }
-
-            return Ok(timeZone);
-        }
-
+        
     }
 }
