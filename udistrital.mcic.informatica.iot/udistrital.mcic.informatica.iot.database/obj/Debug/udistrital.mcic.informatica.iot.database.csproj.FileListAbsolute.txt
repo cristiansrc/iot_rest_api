@@ -1,0 +1,14 @@
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.database\bin\Debug\udistrital.mcic.informatica.iot.database.dll.config
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.database\bin\Debug\udistrital.mcic.informatica.iot.database.dll
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.database\bin\Debug\udistrital.mcic.informatica.iot.database.pdb
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.database\bin\Debug\EntityFramework.dll
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.database\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.database\bin\Debug\udistrital.mcic.informatica.iot.dto.dll
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.database\bin\Debug\udistrital.mcic.informatica.iot.dto.pdb
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.database\bin\Debug\EntityFramework.xml
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.database\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.database\obj\Debug\udistrital.mcic.informatica.iot.database.csprojAssemblyReference.cache
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.database\obj\Debug\udistrital.mcic.informatica.iot.database.csproj.CoreCompileInputs.cache
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.database\obj\Debug\udistrital.mcic.informatica.iot.database.csproj.CopyComplete
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.database\obj\Debug\udistrital.mcic.informatica.iot.database.dll
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.database\obj\Debug\udistrital.mcic.informatica.iot.database.pdb

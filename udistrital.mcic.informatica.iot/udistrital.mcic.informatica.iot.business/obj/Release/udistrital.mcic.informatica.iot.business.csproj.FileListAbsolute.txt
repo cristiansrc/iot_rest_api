@@ -1,0 +1,14 @@
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.business\bin\Release\udistrital.mcic.informatica.iot.business.dll
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.business\bin\Release\udistrital.mcic.informatica.iot.business.pdb
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.business\bin\Release\udistrital.mcic.informatica.iot.database.dll
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.business\bin\Release\udistrital.mcic.informatica.iot.dto.dll
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.business\bin\Release\EntityFramework.dll
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.business\bin\Release\udistrital.mcic.informatica.iot.database.pdb
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.business\bin\Release\udistrital.mcic.informatica.iot.database.dll.config
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.business\bin\Release\udistrital.mcic.informatica.iot.dto.pdb
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.business\bin\Release\EntityFramework.xml
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.business\obj\Release\udistrital.mcic.informatica.iot.business.csprojAssemblyReference.cache
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.business\obj\Release\udistrital.mcic.informatica.iot.business.csproj.CoreCompileInputs.cache
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.business\obj\Release\udistrital.mcic.informatica.iot.business.csproj.CopyComplete
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.business\obj\Release\udistrital.mcic.informatica.iot.business.dll
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.business\obj\Release\udistrital.mcic.informatica.iot.business.pdb

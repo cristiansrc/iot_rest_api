@@ -1,0 +1,6 @@
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.dto\bin\Debug\udistrital.mcic.informatica.iot.dto.dll
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.dto\bin\Debug\udistrital.mcic.informatica.iot.dto.pdb
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.dto\obj\Debug\udistrital.mcic.informatica.iot.dto.csprojAssemblyReference.cache
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.dto\obj\Debug\udistrital.mcic.informatica.iot.dto.csproj.CoreCompileInputs.cache
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.dto\obj\Debug\udistrital.mcic.informatica.iot.dto.dll
+c:\users\crist\source\repos\udistrital.mcic.informatica.iot\udistrital.mcic.informatica.iot.dto\obj\Debug\udistrital.mcic.informatica.iot.dto.pdb
