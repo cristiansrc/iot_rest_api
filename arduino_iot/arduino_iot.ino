@@ -21,9 +21,6 @@
 
 #include <ESP8266HTTPClient.h>
 
-
-
-
 /* Connection Pins
 Arduino    Microphone
  GND          GND
