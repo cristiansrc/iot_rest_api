@@ -104,17 +104,12 @@ void loop ()
           Serial.println();
           Serial.println();
           Serial.println();
-        }
-        
-        
+        }        
       }
 
-      
-      
     } else {
       Serial.println("No se pudo enviar");
     }
-    
     valSend = 0;
   }
 }
