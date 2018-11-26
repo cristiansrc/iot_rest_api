@@ -68,6 +68,76 @@
 	$('.spinner.demo').hide();
     });
     </script>
+	
+	<script>
+	var domainRestApi = "http://iotrest.azurewebsites.net/"; //Domain restApi
+	var restNoise = domainRestApi + "api/Noise"; //Endpoint noise
+	var restNoiseConfig = domainRestApi + "api/NoiseConfig"; //Endpoint noiseConfig
+	
+	function chartRender(){
+		
+		var datachart = [];
+		var average = 0;
+		
+		restNoise = restNoise + "?";
+		restNoise = restNoise + "startDate=2018-11-25";
+		restNoise = restNoise + "&";
+		restNoise = restNoise + "startHour=20:00";
+		restNoise = restNoise + "&";
+		restNoise = restNoise + "endDate=2018-11-25";
+		restNoise = restNoise + "&";
+		restNoise = restNoise + "endHour=20:20";
+		
+		$.ajax({
+            url: URL,
+            type: 'GET',
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8',
+            success: function (result) {
+				var obj = JSON.parse(result);
+			    var total = 0.0;
+				var cont = 0;
+				$.each(obj, function(i, item) {
+					cont = cont + 1;
+					datachart.push({x: new Date(item.dateNoise), y: item.levelNoise});
+				});​
+				
+				average = total/cont;
+            },
+            error: function (error) {
+                alert("No se pudo consultar el servicio");
+            }
+        });
+
+		var chart = new CanvasJS.Chart("chartContainer", {
+			animationEnabled: true,  
+			title:{
+				text: "Niveles de ruido registrados."
+			},
+			axisY: {
+				title: "Decibeles",
+				valueFormatString: "#0,,.",
+				suffix: "",
+				stripLines: [{
+					value: average,
+					label: "Promedio"
+				}]
+			},
+			data: [{
+				yValueFormatString: "#,### Units",
+				xValueFormatString: "HH:MM",
+				type: "spline",
+				dataPoints: datachart
+			}]
+		});
+		chart.render();
+	}
+	window.onload = function () {
+
+		chartRender();
+
+	}
+</script>
 </head>
 <body class=" ">
 <div>
@@ -332,7 +402,8 @@
        <div class="tools"><i class="fa fa-chevron-up"></i><i data-toggle="modal" data-target="#modal-config" class="fa fa-cog"></i><i class="fa fa-refresh"></i><i class="fa fa-times"></i></div>
     </div>
     <div class="portlet-body">
-       
+       <div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+	   <script src="app/canvasjs/canvasjs.min.js"></script>
     </div>
  </div>
 <!--END CONTENT--></div>
