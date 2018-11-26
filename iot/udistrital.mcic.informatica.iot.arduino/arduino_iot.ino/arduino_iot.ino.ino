@@ -21,6 +21,9 @@
 
 #include <ESP8266HTTPClient.h>
 
+
+
+
 /* Connection Pins
 Arduino    Microphone
  GND          GND
@@ -44,18 +47,14 @@ void setup ()
 { 
   Serial.begin(9600);
 
-  WiFi.begin("Cristiansrc", "12345678");
-  //WiFi.begin("LOCAL", "crisAws85");
+  //WiFi.begin("Cristiansrc", "12345678");
+  WiFi.begin("LOCAL", "crisAws85");
 
   while (WiFi.status() != WL_CONNECTED) {  //Wait for the WiFI connection completion
- 
     delay(500);
     Serial.println("Waiting for connection");
     Serial.println();
- 
   }
-  
-  //pinMode (ADC, INPUT) ;// output interface D0 is defined sensor//
 }
 
 void loop ()
@@ -104,12 +103,12 @@ void loop ()
           Serial.println();
           Serial.println();
           Serial.println();
-        }        
+        } 
       }
-
     } else {
       Serial.println("No se pudo enviar");
     }
+    
     valSend = 0;
   }
 }
