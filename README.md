@@ -3,6 +3,7 @@
 Este proyecto sirve para capturar los decibeles de ruido capturados por un sensor de ruido y esta informacion se muestra a tra vez de una pagina, una aplicacion android y una aplicacion para la tienda de windows
 
 Contenido
+
 -back: Contiene un proyecto en .net en el cual se encuentra el back del sistema y los servicios rest.
   -udistrital.mcic.informatica.iot
 -front: Contiene los proyectos nesesarios con los cuales los usuarios podran interactuar con el sistema
