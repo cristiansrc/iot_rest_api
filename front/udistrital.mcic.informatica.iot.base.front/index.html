@@ -1,419 +1,441 @@
-
 <!DOCTYPE html>
+<!--
+* CoreUI - Free Bootstrap Admin Template
+* @version v2.1.8
+* @link https://coreui.io
+* Copyright (c) 2018 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+
 <html lang="en">
-<head><title></title>
+  <head>
+    <base href="./">
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="cache-control" content="no-cache">
-    <meta http-equiv="expires" content="Thu, 19 Nov 1900 08:52:00 GMT">
-    <link rel="shortcut icon" href="images/icons/favicon.ico">
-    <link rel="apple-touch-icon" href="images/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/icons/favicon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/icons/favicon-114x114.png">
-    <!--Loading bootstrap css-->
-    <link type="text/css" rel="stylesheet"
-          href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700">
-    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,700,300">
-    
-                <link type="text/css" rel="stylesheet" href="app/vendors/jquery-ui-1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom.min.css">
-                        <link type="text/css" rel="stylesheet" href="app/vendors/font-awesome/css/font-awesome.min.css">
-                        <link type="text/css" rel="stylesheet" href="app/vendors/bootstrap/css/bootstrap.min.css">
-                        <link type="text/css" rel="stylesheet" href="app/vendors/animate.css/animate.css">
-                        <link type="text/css" rel="stylesheet" href="app/vendors/jquery-pace/pace.css">
-                        <link type="text/css" rel="stylesheet" href="app/vendors/iCheck/skins/all.css">
-                        <link type="text/css" rel="stylesheet" href="app/vendors/jquery-notific8/jquery.notific8.min.css">
-                        <link type="text/css" rel="stylesheet" href="app/vendors/bootstrap-daterangepicker/daterangepicker-bs3.css">
-                        <link type="text/css" rel="stylesheet"
-                   href="app/css/themes/style1/orange-blue.css"  class="default-style"             >
-                        <link type="text/css" rel="stylesheet"
-                   href="app/css/themes/style1/orange-blue.css"  id="theme-change"  class="style-change color-change"             >
-                        <link type="text/css" rel="stylesheet" href="app/css/style-responsive.css">
-                        <link type="text/css" rel="stylesheet" href="app/vendors/lightbox/css/lightbox.css">
-                        <link type="text/css" rel="stylesheet" href="app/vendors/pageloader/pageloader.css">
-                        
-        <script src="app/js/jquery-1.10.2.min.js"></script>
-        <script src="app/js/jquery-migrate-1.2.1.min.js"></script>
-        <script src="app/js/jquery-ui.js"></script>
-        <script src="app/vendors/bootstrap/js/bootstrap.min.js"></script>
-        <script src="app/vendors/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
-        <script src="app/js/html5shiv.js"></script>
-        <script src="app/js/respond.min.js"></script>
-        <script src="app/vendors/metisMenu/jquery.metisMenu.js"></script>
-        <script src="app/vendors/slimScroll/jquery.slimscroll.js"></script>
-        <script src="app/vendors/jquery-cookie/jquery.cookie.js"></script>
-        <script src="app/vendors/iCheck/icheck.min.js"></script>
-        <script src="app/vendors/iCheck/custom.min.js"></script>
-        <script src="app/vendors/jquery-notific8/jquery.notific8.min.js"></script>
-        <script src="app/vendors/jquery-highcharts/highcharts.js"></script>
-        <script src="app/js/jquery.menu.js"></script>
-        <script src="app/vendors/jquery-pace/pace.min.js"></script>
-        <script src="app/vendors/holder/holder.js"></script>
-        <script src="app/vendors/responsive-tabs/responsive-tabs.js"></script>
-        <script src="app/vendors/jquery-news-ticker/jquery.newsTicker.min.js"></script>
-        <script src="app/vendors/moment/moment.js"></script>
-        <script src="app/vendors/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-        <script src="app/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-        <script src="app/vendors/lightbox/js/lightbox.min.js"></script>
-        <script src="app/js/ui-portlets.js"></script>
-        <script src="app/js/main.js"></script>
-        <script src="app/vendors/jquery-highcharts/highcharts.js"></script>
-        <script src="app/vendors/jquery-highcharts/highcharts-more.js"></script>
-        <script src="app/vendors/jquery-highcharts/exporting.js"></script>
-        <script src="app/js/charts-highchart-area.js"></script>
-        <script type="text/javascript">
-    $(document).ready(function(){
-	// TO USE PRELOADRE, LET OPEN CODE BELOW AND DELETE ALL 
-	// $('.spinner.demo').fadeOut('slow');
-	$('.spinner.demo').hide();
-    });
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>Sensor de ruido</title>
+    <!-- Icons-->
+    <link href="vendors/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+    <link href="vendors/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendors/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <!-- Main styles for this application-->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
+	<script src="canvasjs/canvasjs.min.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      // Shared ID
+      gtag('config', 'UA-118965717-3');
+      // Bootstrap ID
+      gtag('config', 'UA-118965717-5');
+	  
+	  
+		
     </script>
-	
-	<script>
-	var domainRestApi = "http://iotrest.azurewebsites.net/"; //Domain restApi
-	var restNoise = domainRestApi + "api/Noise"; //Endpoint noise
-	var restNoiseConfig = domainRestApi + "api/NoiseConfig"; //Endpoint noiseConfig
-	
-	function chartRender(){
+  </head>
+  <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+    <header class="app-header navbar">
+      <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+        
+      </button>
+      <a class="navbar-brand" href="#">
+        Sensor de ruido
+      </a>
+     
+      <ul class="nav navbar-nav d-md-down-none">
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav ml-auto">
+        
 		
-		var datachart = [];
-		var average = 0;
 		
-		restNoise = restNoise + "?";
-		restNoise = restNoise + "startDate=2018-11-25";
-		restNoise = restNoise + "&";
-		restNoise = restNoise + "startHour=20:00";
-		restNoise = restNoise + "&";
-		restNoise = restNoise + "endDate=2018-11-25";
-		restNoise = restNoise + "&";
-		restNoise = restNoise + "endHour=20:20";
 		
-		$.ajax({
-            url: URL,
-            type: 'GET',
-            dataType: 'json',
-            contentType: 'application/json; charset=utf-8',
-            success: function (result) {
-				var obj = JSON.parse(result);
-			    var total = 0.0;
-				var cont = 0;
-				$.each(obj, function(i, item) {
-					cont = cont + 1;
-					datachart.push({x: new Date(item.dateNoise), y: item.levelNoise});
-				});​
-				
-				average = total/cont;
-            },
-            error: function (error) {
-                alert("No se pudo consultar el servicio");
-            }
-        });
+        <li class="nav-item dropdown">
+       
+		  
+		  
+		  
+        </li>
+      </ul>
 
-		var chart = new CanvasJS.Chart("chartContainer", {
-			animationEnabled: true,  
-			title:{
-				text: "Niveles de ruido registrados."
-			},
-			axisY: {
-				title: "Decibeles",
-				valueFormatString: "#0,,.",
-				suffix: "",
-				stripLines: [{
-					value: average,
-					label: "Promedio"
-				}]
-			},
-			data: [{
-				yValueFormatString: "#,### Units",
-				xValueFormatString: "HH:MM",
-				type: "spline",
-				dataPoints: datachart
-			}]
-		});
-		chart.render();
-	}
-	window.onload = function () {
 
-		chartRender();
-
-	}
-</script>
-</head>
-<body class=" ">
-<div>
-    <!--div class="news-ticker bg-orange">
-        <div class="container">
-            <ul id="news-ticker-content" class="list-unstyled mbn">
-                <li><a href='http://madmin.swlabs.co/', target='_blank'>This is HTML app version of this template. To
-                    see Angular app version, please click here</a></li>
-            </ul>
-            <a id="news-ticker-close" href="javascript:;"><i class="fa fa-times"></i></a></div>
-    </div-->
-    <!--BEGIN BACK TO TOP--><a id="totop" href="#"><i class="fa fa-angle-up"></i></a><!--END BACK TO TOP-->
-    <!--BEGIN TOPBAR-->
-    <div id="header-topbar-option-demo" class="page-header-topbar">
-        <nav id="topbar" role="navigation" style="margin-bottom: 0; z-index: 2;"
-             class="navbar navbar-default navbar-static-top">
-            <div class="navbar-header">
-                <button type="button" data-toggle="collapse" data-target=".sidebar-collapse" class="navbar-toggle"><span
-                        class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
-                        class="icon-bar"></span><span class="icon-bar"></span></button>
-                <a id="logo" href="http://localhost/DependenciasFuncionales/" class="navbar-brand"><!--img src="http://localhost/cityzeen/template/app/images/gallery/cityzeenlogo.jpeg" alt="cityzeen" height="auto" width="100%" /--></a>
-            </div>
-            <div class="topbar-main"><a id="menu-toggle" href="#" class="hidden-xs"><i class="fa fa-bars"></i></a>
-                <ul class="nav navbar-nav    ">
-                    <li><a class="active" href="/sms/plano/smSubidos.html">Estadisticas de subida (SMS)</a></li>
-                    
-                    <!--li class="active"><a href="index.html">Dashboard</a></li>
-                    <li><a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle">Layouts
-                        &nbsp;<i class="fa fa-angle-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="layout-left-sidebar.html">Left Sidebar</a></li>
-                            <li><a href="layout-right-sidebar.html">Right Sidebar</a></li>
-                            <li><a href="layout-left-sidebar-collapsed.html">Left Sidebar Collasped</a></li>
-                            <li><a href="layout-right-sidebar-collapsed.html">Right Sidebar Collasped</a></li>
-                            <li class="dropdown-submenu"><a href="javascript:;" data-toggle="dropdown"
-                                                            class="dropdown-toggle">More Options</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Second level link</a></li>
-                                    <li class="dropdown-submenu"><a href="javascript:;" data-toggle="dropdown"
-                                                                    class="dropdown-toggle">More Options</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">Third level link</a></li>
-                                            <li><a href="#">Third level link</a></li>
-                                            <li><a href="#">Third level link</a></li>
-                                            <li><a href="#">Third level link</a></li>
-                                            <li><a href="#">Third level link</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Second level link</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="mega-menu-dropdown"><a href="javascript:;" data-toggle="dropdown"
-                                                      class="dropdown-toggle">UI Elements
-                        &nbsp;<i class="fa fa-angle-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="mega-menu-content">
-                                    <div class="row">
-                                        <ul class="col-md-4 mega-menu-submenu">
-                                            <li><h3>Neque porro quisquam</h3></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i>Lorem ipsum dolor sit amet</a>
-                                            </li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i>Consectetur adipisicing
-                                                elit</a></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i>Sed ut perspiciatis unde
-                                                omnis</a></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i>At vero eos et accusamus et
-                                                iusto</a></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i>Nam libero tempore cum
-                                                soluta</a></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i>Et harum quidem rerum
-                                                facilis est</a></li>
-                                        </ul>
-                                        <ul class="col-md-4 mega-menu-submenu">
-                                            <li><h3>Neque porro quisquam</h3></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i>Lorem ipsum dolor sit amet</a>
-                                            </li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i>Consectetur adipisicing
-                                                elit</a></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i>Sed ut perspiciatis unde
-                                                omnis</a></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i>At vero eos et accusamus et
-                                                iusto</a></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i>Nam libero tempore cum
-                                                soluta</a></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i>Et harum quidem rerum
-                                                facilis est</a></li>
-                                        </ul>
-                                        <ul class="col-md-4 mega-menu-submenu">
-                                            <li><h3>Neque porro quisquam</h3></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i>Lorem ipsum dolor sit amet</a>
-                                            </li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i>Consectetur adipisicing
-                                                elit</a></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i>Sed ut perspiciatis unde
-                                                omnis</a></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i>At vero eos et accusamus et
-                                                iusto</a></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i>Nam libero tempore cum
-                                                soluta</a></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i>Et harum quidem rerum
-                                                facilis est</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="mega-menu-dropdown mega-menu-full"><a href="javascript:;" data-toggle="dropdown"
-                                                                     class="dropdown-toggle">Extras
-                        &nbsp;<i class="fa fa-angle-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="mega-menu-content">
-                                    <div class="row">
-                                        <div class="col-md-7">
-                                            <ul class="col-md-4 mega-menu-submenu">
-                                                <li><h3>Neque porro quisquam</h3></li>
-                                                <li><a href="#"><i class="fa fa-angle-right"></i>Lorem ipsum dolor sit
-                                                    amet</a></li>
-                                                <li><a href="#"><i class="fa fa-angle-right"></i>Consectetur adipisicing
-                                                    elit</a></li>
-                                                <li><a href="#"><i class="fa fa-angle-right"></i>Sed ut perspiciatis
-                                                    unde omnis</a></li>
-                                                <li><a href="#"><i class="fa fa-angle-right"></i>At vero eos et
-                                                    accusamus et iusto</a></li>
-                                                <li><a href="#"><i class="fa fa-angle-right"></i>Nam libero tempore cum
-                                                    soluta</a></li>
-                                                <li><a href="#"><i class="fa fa-angle-right"></i>Et harum quidem rerum
-                                                    facilis est</a></li>
-                                            </ul>
-                                            <ul class="col-md-4 mega-menu-submenu">
-                                                <li><h3>Neque porro quisquam</h3></li>
-                                                <li><a href="#"><i class="fa fa-angle-right"></i>Lorem ipsum dolor sit
-                                                    amet</a></li>
-                                                <li><a href="#"><i class="fa fa-angle-right"></i>Consectetur adipisicing
-                                                    elit</a></li>
-                                                <li><a href="#"><i class="fa fa-angle-right"></i>Sed ut perspiciatis
-                                                    unde omnis</a></li>
-                                                <li><a href="#"><i class="fa fa-angle-right"></i>At vero eos et
-                                                    accusamus et iusto</a></li>
-                                                <li><a href="#"><i class="fa fa-angle-right"></i>Nam libero tempore cum
-                                                    soluta</a></li>
-                                                <li><a href="#"><i class="fa fa-angle-right"></i>Et harum quidem rerum
-                                                    facilis est</a></li>
-                                            </ul>
-                                            <ul class="col-md-4 mega-menu-submenu">
-                                                <li><h3>Neque porro quisquam</h3></li>
-                                                <li><a href="#"><i class="fa fa-angle-right"></i>Lorem ipsum dolor sit
-                                                    amet</a></li>
-                                                <li><a href="#"><i class="fa fa-angle-right"></i>Consectetur adipisicing
-                                                    elit</a></li>
-                                                <li><a href="#"><i class="fa fa-angle-right"></i>Sed ut perspiciatis
-                                                    unde omnis</a></li>
-                                                <li><a href="#"><i class="fa fa-angle-right"></i>At vero eos et
-                                                    accusamus et iusto</a></li>
-                                                <li><a href="#"><i class="fa fa-angle-right"></i>Nam libero tempore cum
-                                                    soluta</a></li>
-                                                <li><a href="#"><i class="fa fa-angle-right"></i>Et harum quidem rerum
-                                                    facilis est</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-5 document-demo">
-                                            <ul class="col-md-4 mega-menu-submenu">
-                                                <li><a href="#"><i
-                                                        class="fa fa-info-circle"></i><span>Introduction</span></a></li>
-                                                <li><a href="#"><i class="fa fa-download"></i><span>Installation</span></a>
-                                                </li>
-                                            </ul>
-                                            <ul class="col-md-4 mega-menu-submenu">
-                                                <li><a href="#"><i class="fa fa-cog"></i><span>T3 Settings</span></a>
-                                                </li>
-                                                <li><a href="#"><i class="fa fa-desktop"></i><span>Layout System</span></a>
-                                                </li>
-                                            </ul>
-                                            <ul class="col-md-4 mega-menu-submenu">
-                                                <li><a href="#"><i
-                                                        class="fa fa-magic"></i><span>Customization</span></a></li>
-                                                <li><a href="#"><i
-                                                        class="fa fa-question-circle"></i><span>FAQs</span></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </li-->
-                </ul>
-                <!--form id="topbar-search" action="#" method="GET" class="hidden-xs">
-                    <div class="input-group"><input type="text" placeholder="Search..." class="form-control"/><span
-                            class="input-group-btn"><a href="javascript:;" class="btn submit"><i
-                            class="fa fa-search"></i></a></span></div>
-                </form-->
-                <!-- notificaciones -->
-            </div>
+    </header>
+    <div class="app-body">
+      <div class="sidebar">
+        <nav class="sidebar-nav">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="nav-icon icon-speedometer"></i> Gr&aacute;fica
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="colors.html">
+                <i class="nav-icon icon-drop"></i> Configuraci&oacute;n</a>
+            </li>
+          </ul>
         </nav>
-        <!--BEGIN MODAL CONFIG PORTLET-->
-        <div id="modal-config" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
-                        <h4 class="modal-title">Modal title</h4></div>
-                    <div class="modal-body"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend et
-                        nisl eget porta. Curabitur elementum sem molestie nisl varius, eget tempus odio molestie. Nunc
-                        vehicula sem arcu, eu pulvinar neque cursus ac. Aliquam ultricies lobortis magna et aliquam.
-                        Vestibulum egestas eu urna sed ultricies. Nullam pulvinar dolor vitae quam dictum condimentum.
-                        Integer a sodales elit, eu pulvinar leo. Nunc nec aliquam nisi, a mollis neque. Ut vel felis
-                        quis tellus hendrerit placerat. Vivamus vel nisl non magna feugiat dignissim sed ut nibh. Nulla
-                        elementum, est a pretium hendrerit, arcu risus luctus augue, mattis aliquet orci ligula eget
-                        massa. Sed ut ultricies felis.</p></div>
-                    <div class="modal-footer">
-                        <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
+        <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+      </div>
+      <main class="main">
+        <!-- Breadcrumb-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">Home</li>
+          <li class="breadcrumb-item">
+            <a href="#">Admin</a>
+          </li>
+          <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+        <div class="container-fluid">
+          <div class="animated fadeIn">
+            
+            <!-- /.row-->
+            <div class="card">
+              
             </div>
-        </div>
-        <!--END MODAL CONFIG PORTLET--></div>
-    <!--END TOPBAR-->
-    <div id="wrapper"><!--BEGIN SIDEBAR MENU-->    <div class="clearfix"></div>
-        <nav id="sidebar" role="navigation" class="navbar-default navbar-static-side">
-            <div class="sidebar-collapse menu-scroll" style="height: auto;">
-               <ul id="side-menu" class="nav">
-                   <li class="user-panel">
-                       <div class="thumb"><img src="https://scontent.fbog4-1.fna.fbcdn.net/v/t31.0-8/23456269_10210249859505179_3810065334641398327_o.jpg?_nc_cat=105&oh=84aa233385b258c10bec4c5fcda7962f&oe=5C22A3D4" alt="" class="img-circle"></div>
-                       <div class="info">
-                           <p>Cristhiam Reina</p>
-                           <ul class="list-inline list-unstyled">
-                               <li><a href="http://localhost/DependenciasFuncionales/profile.html" data-hover="tooltip" title="" data-original-title="Profile"><i class="fa fa-user"></i></a></li>
-                               <li><a href="http://localhost/DependenciasFuncionales/login/exitSession.html" data-hover="tooltip" title="" data-original-title="Salir"><i class="fa fa-sign-out"></i></a></li>
-                           </ul>
-                       </div>
-                       <div class="clearfix"></div>
-                   </li>
-               <li class=""><a href="http://localhost/DependenciasFuncionales/"><i class="fa fa-tachometer fa-fw"><div class="icon-bg bg-orange"></div></i><span class="menu-title">Home</span></a></li>
-               
-               </ul>
-           </div>           
-        </nav>  
-    
-    
-      <!--END CHAT FORM--><!--BEGIN PAGE WRAPPER-->
-        <div id="page-wrapper"><!--BEGIN TITLE & BREADCRUMB PAGE-->
-            <!--div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
-                <div class="page-header pull-left">
-                    <div class="page-title"></div>
-                    
-                </div>
-                <ol class="breadcrumb page-breadcrumb">
-                                    </ol>
-                <div class="btn btn-blue reportrange hide"><i class="fa fa-calendar"></i>&nbsp;<span></span>&nbsp;report&nbsp;<i
-                        class="fa fa-angle-down"></i><input type="hidden" name="datestart"/><input type="hidden"
-                                                                                                   name="endstart"/>
-                </div>
-                <div class="clearfix"></div>
-            </div--><div class="portlet box">
-    <div class="portlet-header">
-       <div class="caption">Gr&aacute;fica</div>
-       <div class="tools"><i class="fa fa-chevron-up"></i><i data-toggle="modal" data-target="#modal-config" class="fa fa-cog"></i><i class="fa fa-refresh"></i><i class="fa fa-times"></i></div>
-    </div>
-    <div class="portlet-body">
-       <div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
-	   <script src="app/canvasjs/canvasjs.min.js"></script>
-    </div>
- </div>
-<!--END CONTENT--></div>
-        <!--BEGIN FOOTER-->
-<div id="footer">
-            <div class="copyright">
-                </div>
-        </div>
-        <!--END FOOTER--><!--END PAGE WRAPPER--></div>
-</div>
 
-</body>
+            <!-- /.row-->
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header">Traffic & Sales</div>
+                  <div class="card-body">
+                    <div class="row">
+					
+                    </div>
+
+                  </div>
+                </div>
+              
+			  
+			  
+			  
+			  </div>
+              <!-- /.col-->
+            </div>
+            <!-- /.row-->
+          </div>
+        </div>
+      </main>
+      <aside class="aside-menu">
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#timeline" role="tab">
+              <i class="icon-list"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#messages" role="tab">
+              <i class="icon-speech"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#settings" role="tab">
+              <i class="icon-settings"></i>
+            </a>
+          </li>
+        </ul>
+        <!-- Tab panes-->
+        <div class="tab-content">
+          <div class="tab-pane active" id="timeline" role="tabpanel">
+            <div class="list-group list-group-accent">
+              <div class="list-group-item list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">Today</div>
+              <div class="list-group-item list-group-item-accent-warning list-group-item-divider">
+                <div class="avatar float-right">
+                  <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+                </div>
+                <div>Meeting with
+                  <strong>Lucas</strong>
+                </div>
+                <small class="text-muted mr-3">
+                  <i class="icon-calendar"></i>  1 - 3pm</small>
+                <small class="text-muted">
+                  <i class="icon-location-pin"></i>  Palo Alto, CA</small>
+              </div>
+              <div class="list-group-item list-group-item-accent-info">
+                <div class="avatar float-right">
+                  <img class="img-avatar" src="img/avatars/4.jpg" alt="admin@bootstrapmaster.com">
+                </div>
+                <div>Skype with
+                  <strong>Megan</strong>
+                </div>
+                <small class="text-muted mr-3">
+                  <i class="icon-calendar"></i>  4 - 5pm</small>
+                <small class="text-muted">
+                  <i class="icon-social-skype"></i>  On-line</small>
+              </div>
+              <div class="list-group-item list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">Tomorrow</div>
+              <div class="list-group-item list-group-item-accent-danger list-group-item-divider">
+                <div>New UI Project -
+                  <strong>deadline</strong>
+                </div>
+                <small class="text-muted mr-3">
+                  <i class="icon-calendar"></i>  10 - 11pm</small>
+                <small class="text-muted">
+                  <i class="icon-home"></i>  creativeLabs HQ</small>
+                <div class="avatars-stack mt-2">
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/2.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/3.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/4.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/5.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/6.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                </div>
+              </div>
+              <div class="list-group-item list-group-item-accent-success list-group-item-divider">
+                <div>
+                  <strong>#10 Startups.Garden</strong> Meetup</div>
+                <small class="text-muted mr-3">
+                  <i class="icon-calendar"></i>  1 - 3pm</small>
+                <small class="text-muted">
+                  <i class="icon-location-pin"></i>  Palo Alto, CA</small>
+              </div>
+              <div class="list-group-item list-group-item-accent-primary list-group-item-divider">
+                <div>
+                  <strong>Team meeting</strong>
+                </div>
+                <small class="text-muted mr-3">
+                  <i class="icon-calendar"></i>  4 - 6pm</small>
+                <small class="text-muted">
+                  <i class="icon-home"></i>  creativeLabs HQ</small>
+                <div class="avatars-stack mt-2">
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/2.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/3.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/4.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/5.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/6.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/8.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane p-3" id="messages" role="tabpanel">
+            <div class="message">
+              <div class="py-3 pb-5 mr-3 float-left">
+                <div class="avatar">
+                  <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+                  <span class="avatar-status badge-success"></span>
+                </div>
+              </div>
+              <div>
+                <small class="text-muted">Lukasz Holeczek</small>
+                <small class="text-muted float-right mt-1">1:52 PM</small>
+              </div>
+              <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+              <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+            </div>
+            <hr>
+            <div class="message">
+              <div class="py-3 pb-5 mr-3 float-left">
+                <div class="avatar">
+                  <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+                  <span class="avatar-status badge-success"></span>
+                </div>
+              </div>
+              <div>
+                <small class="text-muted">Lukasz Holeczek</small>
+                <small class="text-muted float-right mt-1">1:52 PM</small>
+              </div>
+              <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+              <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+            </div>
+            <hr>
+            <div class="message">
+              <div class="py-3 pb-5 mr-3 float-left">
+                <div class="avatar">
+                  <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+                  <span class="avatar-status badge-success"></span>
+                </div>
+              </div>
+              <div>
+                <small class="text-muted">Lukasz Holeczek</small>
+                <small class="text-muted float-right mt-1">1:52 PM</small>
+              </div>
+              <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+              <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+            </div>
+            <hr>
+            <div class="message">
+              <div class="py-3 pb-5 mr-3 float-left">
+                <div class="avatar">
+                  <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+                  <span class="avatar-status badge-success"></span>
+                </div>
+              </div>
+              <div>
+                <small class="text-muted">Lukasz Holeczek</small>
+                <small class="text-muted float-right mt-1">1:52 PM</small>
+              </div>
+              <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+              <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+            </div>
+            <hr>
+            <div class="message">
+              <div class="py-3 pb-5 mr-3 float-left">
+                <div class="avatar">
+                  <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+                  <span class="avatar-status badge-success"></span>
+                </div>
+              </div>
+              <div>
+                <small class="text-muted">Lukasz Holeczek</small>
+                <small class="text-muted float-right mt-1">1:52 PM</small>
+              </div>
+              <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+              <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+            </div>
+          </div>
+          <div class="tab-pane p-3" id="settings" role="tabpanel">
+            <h6>Settings</h6>
+            <div class="aside-options">
+              <div class="clearfix mt-4">
+                <small>
+                  <b>Option 1</b>
+                </small>
+                <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+                  <input class="switch-input" type="checkbox" checked="">
+                  <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+                </label>
+              </div>
+              <div>
+                <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
+              </div>
+            </div>
+            <div class="aside-options">
+              <div class="clearfix mt-3">
+                <small>
+                  <b>Option 2</b>
+                </small>
+                <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+                  <input class="switch-input" type="checkbox">
+                  <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+                </label>
+              </div>
+              <div>
+                <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
+              </div>
+            </div>
+            <div class="aside-options">
+              <div class="clearfix mt-3">
+                <small>
+                  <b>Option 3</b>
+                </small>
+                <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+                  <input class="switch-input" type="checkbox">
+                  <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+                </label>
+              </div>
+            </div>
+            <div class="aside-options">
+              <div class="clearfix mt-3">
+                <small>
+                  <b>Option 4</b>
+                </small>
+                <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+                  <input class="switch-input" type="checkbox" checked="">
+                  <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+                </label>
+              </div>
+            </div>
+            <hr>
+            <h6>System Utilization</h6>
+            <div class="text-uppercase mb-1 mt-4">
+              <small>
+                <b>CPU Usage</b>
+              </small>
+            </div>
+            <div class="progress progress-xs">
+              <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <small class="text-muted">348 Processes. 1/4 Cores.</small>
+            <div class="text-uppercase mb-1 mt-2">
+              <small>
+                <b>Memory Usage</b>
+              </small>
+            </div>
+            <div class="progress progress-xs">
+              <div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <small class="text-muted">11444GB/16384MB</small>
+            <div class="text-uppercase mb-1 mt-2">
+              <small>
+                <b>SSD 1 Usage</b>
+              </small>
+            </div>
+            <div class="progress progress-xs">
+              <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <small class="text-muted">243GB/256GB</small>
+            <div class="text-uppercase mb-1 mt-2">
+              <small>
+                <b>SSD 2 Usage</b>
+              </small>
+            </div>
+            <div class="progress progress-xs">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <small class="text-muted">25GB/256GB</small>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <footer class="app-footer">
+      <div>
+        <a href="https://coreui.io">CoreUI</a>
+        <span>&copy; 2018 creativeLabs.</span>
+      </div>
+      <div class="ml-auto">
+        <span>Powered by</span>
+        <a href="https://coreui.io">CoreUI</a>
+      </div>
+    </footer>
+    <!-- CoreUI and necessary plugins-->
+    <script src="vendors/jquery/js/jquery.min.js"></script>
+    <script src="vendors/popper.js/js/popper.min.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendors/pace-progress/js/pace.min.js"></script>
+    <script src="vendors/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="vendors/@coreui/coreui/js/coreui.min.js"></script>
+    <!-- Plugins and scripts required by this view-->
+    <script src="vendors/chart.js/js/Chart.min.js"></script>
+    <script src="vendors/@coreui/coreui-plugin-chartjs-custom-tooltips/js/custom-tooltips.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
