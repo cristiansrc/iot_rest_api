@@ -362,8 +362,8 @@ function chartRender() {
                                     }]
                             },
                             data: [{
-                                    yValueFormatString: "##.##",
-                                    xValueFormatString: "Decibeles",
+                                    yValueFormatString: "Decibeles: ##.##",
+                                    xValueFormatString: "",
                                     type: "spline",
                                     dataPoints: datachart
                             }]

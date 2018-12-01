@@ -262,7 +262,6 @@ var brandBoxChartOptions = {
 			hoverBorderWidth: 3
 		}
 	} // eslint-disable-next-line no-unused-vars
-
 };
 var brandBoxChart1 = new Chart($('#social-box-chart-1'), {
 	type: 'line',
@@ -329,18 +328,24 @@ var brandBoxChart4 = new Chart($('#social-box-chart-4'), {
 });
 //# sourceMappingURL=main.js.map
 
-
 var domainRestApi = "http://iotrest.azurewebsites.net/"; //Domain restApi
 var restNoise = domainRestApi + "api/Noise"; //Endpoint noise
 var restNoiseConfig = domainRestApi + "api/NoiseConfig"; //Endpoint noiseConfig
 
 function chartRender() {
-
 	var datachart = [];
 	var average = 0;
+	var date = new Date();
 
-	restNoise = "http://iotrest.azurewebsites.net/api/Noise?startDate=2018-11-26&startHour=23%3A00&endDate=2018-11-26&endHour=23%3A20";
+	var restNoise = 'http://iotrest.azurewebsites.net/api/Noise?startDate=<%startDate%>&startHour=<%startHour%>&endDate=<%endDate%>&endHour=<%endHour%>';
 
+	restNoise = restNoise.replace("<%endDate%>", date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate());
+	restNoise = restNoise.replace("<%endHour%>", date.getHours() + ":" + date.getMinutes());
+
+	date.setHours(date.getHours() - 1);
+
+	restNoise = restNoise.replace("<%startDate%>", date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate());
+	restNoise = restNoise.replace("<%startHour%>", date.getHours() + ":" + date.getMinutes());
 
 	$.ajax({
 		url: restNoise,
@@ -365,7 +370,7 @@ function chartRender() {
 				},
 				axisY: {
 					title: "Decibeles",
-					valueFormatString: "#0,,.",
+					valueFormatString: "#",
 					suffix: "",
 					stripLines: [{
 						value: average,
@@ -380,18 +385,13 @@ function chartRender() {
 				}]
 			});
 			chart.render();
-
 		},
 		error: function (error) {
 			alert("No se pudo consultar el servicio");
 		}
 	});
-
-
 }
 window.onload = function () {
-
-
-	//setInterval(chartRender, 60000);
 	chartRender();
+	setInterval(chartRender, 60000);
 }
