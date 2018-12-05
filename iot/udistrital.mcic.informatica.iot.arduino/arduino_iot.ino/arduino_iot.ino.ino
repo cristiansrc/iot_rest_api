@@ -92,23 +92,26 @@ void loop ()
         String onNoiseConfig = jsonConfig["OnNoiseConfig"].as<String>();
         cont = jsonConfig["TimeSendInfoNoiseConfig"].as<int>();
         Serial.println(cont);
+        
         if(onNoiseConfig == "S"){
           http.begin(restNoise);  
           http.addHeader("Content-Type", "application/json"); 
           int httpCode = http.POST("{\"levelNoise\":" + strDecibeles + "}");
           String strHttpCode = (String) httpCode;
+          valSend = 0;
           Serial.println("Respuesta del web service: " + strHttpCode);
           Serial.println();
           Serial.println();
           Serial.println();
           Serial.println();
           Serial.println();
+          
         } 
       }
     } else {
       Serial.println("No se pudo enviar");
     }
     
-    valSend = 0;
+    
   }
 }
